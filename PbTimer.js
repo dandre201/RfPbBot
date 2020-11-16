@@ -42,19 +42,19 @@ client.on('ready', () => {
 
 
   //herodian 24h  86400000
-  var lastHero = 42;
+  var lastHero = 1605575880000;
   var heroRepop = 	86400000; // 24 hours in ms
   var heroName= "herodian";
   var heroPopMsg = getNextPop( heroName,lastHero,heroRepop);
-  //message.reply(heroPopMsg);
+  message.reply(heroPopMsg);
 
 
   //ocl  96h  345600000
-  var lastOcl = 42;
+  var lastOcl = 1605668880000;
   var oclRepop = 	345600000; // 96 hours in ms
   var oclName= "RingLeader";
   var oclPopMsg = getNextPop( oclName,lastOcl,oclRepop);
-  //message.reply(oclPopMsg);
+  message.reply(oclPopMsg);
 
     }
 
@@ -104,7 +104,7 @@ client.on('ready', () => {
     }
 
     else if (input === "?OTHER"){
-      // dims, pig, k1/k2 i guess etc eq
+      // dims, ether cali
 
 
       //EQ .. 22:02

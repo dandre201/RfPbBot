@@ -50,7 +50,7 @@ client.on('ready', () => {
 
 
   //ocl  96h  345600000
-  var lastOcl = 1605668880000;
+  var lastOcl = 1605323280000;
   var oclRepop = 	345600000; // 96 hours in ms
   var oclName= "RingLeader";
   var oclPopMsg = getNextPop( oclName,lastOcl,oclRepop);

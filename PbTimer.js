@@ -15,8 +15,8 @@ client.on('ready', () => {
 
  client.on("message", function(message) {
  	var input = message.content.toUpperCase();
- 	if(input === "?MAIN")
- 	{
+
+ 	  if(input === "?MAIN")	{
 
   //draco pop on 15/11/2020  -
   var lastDraco= 1605438480000;
@@ -84,18 +84,55 @@ client.on('ready', () => {
     }
 
     else if (input === "?HQ"){
-// need to check time , repop should be 4 hours
+    // need to check time , repop should be 4 hours
+
+    //Solus, Ana, hq-warbeast
+    var lastHq = 1605531660000;
+    var hqRepop = 14400000; //4 hours  to ms
+    var hqName= "Solus, Ana, warbeast";
+    var hqPopMsg = getNextPop( hqName,lastHq,hqRepop);
+    message.reply(hqPopMsg);
+
+    //hq ratmoth, argol drone
+    var lastHqRat = 1605509100000;
+    var hqRatRepop = 14400000; //4 hours  to ms
+    var hqRatName= "HQ ratmoth, argol drone";
+    var hqRatPopMsg = getNextPop( hqRatName,lastHqRat,hqRatRepop);
+    message.reply(hqRatPopMsg);
+
 
     }
 
     else if (input === "?OTHER"){
-      // dims, pig, k1/k2 i guess etc
+      // dims, pig, k1/k2 i guess etc eq
+
+
+      //EQ .. 22:02
+      var lastEq = 1605564150000;
+      var eqRepop = 14430000; //4 hours 30 secs to ms
+      var eqName= "EQ";
+      var eqPopMsg = getNextPop( eqName,lastEq,eqRepop);
+      message.reply(eqPopMsg);
+
+      //gold pig 10:43 ?
+      var lastEq = 1605523380000;
+      var eqRepop = 86400000; //24 hours to ms
+      var eqName= "Gold Pig";
+      var eqPopMsg = getNextPop( eqName,lastEq,eqRepop);
+      message.reply(eqPopMsg);
+
+      //k1 - 20:44
+      var lastk = 1605559440000;
+      var kRepop = 28800000; // 8 hours to ms
+      var kName= "K1/K2";
+      var kPopMsg = getNextPop( kName,lastk,kRepop);
+      message.reply(kPopMsg);
 
     }
 
     else if (input === "?HELP"){
 
-      var result = ("use the follow command to see PB's:  ?Main,  ?Elan, ?HQ, ?Other"  );
+      var result = ("Use the follow command to see PB's:  ?Main,  ?Elan, ?HQ, ?Other"  );
       message.reply(result);
     }
  });

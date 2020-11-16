@@ -42,7 +42,7 @@ client.on('ready', () => {
 
 
   //herodian 24h  86400000
-  var lastHero = 1605575880000;
+  var lastHero = 1605403080000;
   var heroRepop = 	86400000; // 24 hours in ms
   var heroName= "herodian";
   var heroPopMsg = getNextPop( heroName,lastHero,heroRepop);

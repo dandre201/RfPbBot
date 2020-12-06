@@ -15,6 +15,12 @@ client.on('ready', () => {
 
  client.on("message", function(message) {
  	var input = message.content.toUpperCase();
+  var userNameDate = new Discord.User(client, data);
+  var userName = userNameDate.username;
+
+  message.reply(userName);
+
+    if()
 
  	  if(input === "?MAIN")	{
 
@@ -39,14 +45,6 @@ client.on('ready', () => {
   var gilName= "Gil";
   var gilPopMsg = getNextPop( gilName,lastGil,gilRepop);
   message.reply(gilPopMsg);
-
-
-  //herodian 24h  86400000
-  var lastHero = 1605403080000;
-  var heroRepop = 	86400000; // 24 hours in ms
-  var heroName= "herodian";
-  var heroPopMsg = getNextPop( heroName,lastHero,heroRepop);
-  message.reply(heroPopMsg);
 
 
   //ocl  96h  345600000
@@ -86,19 +84,21 @@ client.on('ready', () => {
     else if (input === "?HQ"){
     // need to check time , repop should be 4 hours
 
+    message.reply("These are wrong stop typnig this , and get me the pop + repop times!!!!! :D");
+
     //Solus, Ana, hq-warbeast
     var lastHq = 1605531660000;
     var hqRepop = 14400000; //4 hours  to ms
     var hqName= "Solus, Ana, warbeast";
     var hqPopMsg = getNextPop( hqName,lastHq,hqRepop);
-    message.reply(hqPopMsg);
+    //message.reply(hqPopMsg);
 
     //hq ratmoth, argol drone
     var lastHqRat = 1605509100000;
     var hqRatRepop = 14400000; //4 hours  to ms
     var hqRatName= "HQ ratmoth, argol drone";
     var hqRatPopMsg = getNextPop( hqRatName,lastHqRat,hqRatRepop);
-    message.reply(hqRatPopMsg);
+    //message.reply(hqRatPopMsg);
 
 
     }
@@ -130,9 +130,19 @@ client.on('ready', () => {
 
     }
 
+  else if (input === "?MEH"){
+    //herodian 24h  86400000
+    var lastHero = 1605403080000;
+    var heroRepop = 	86400000; // 24 hours in ms
+    var heroName= "herodian";
+    var heroPopMsg = getNextPop( heroName,lastHero,heroRepop);
+    message.reply(heroPopMsg);
+    message.reply("Herodian Pb pop time changes after maintenance, this tiem is the earlies and it can be anytime +2 hours");
+    }
+
     else if (input === "?HELP"){
 
-      var result = ("Use the follow command to see PB's:  ?Main,  ?Elan, ?HQ, ?Other"  );
+      var result = ("Use the follow command to see PB's:  ?Main,  ?Elan, ?HQ, ?Other ?Meh"  );
       message.reply(result);
     }
  });

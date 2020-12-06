@@ -16,13 +16,9 @@ client.on('ready', () => {
  client.on("message", function(message) {
  	var input = message.content.toUpperCase();
 
-  var userName = message.member.user.tag
-  message.reply(userName);
-  
-    if(userName !=null){
-      message.reply("hello ");
+//  var userName = message.member.user.tag
 
-     }
+
 
  	  if(input === "?MAIN")	{
 

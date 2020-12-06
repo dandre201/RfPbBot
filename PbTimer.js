@@ -20,7 +20,10 @@ client.on('ready', () => {
 
   message.reply(userName);
 
-    if()
+    if(userName !=null){
+      message.reply("hello ");
+
+     }
 
  	  if(input === "?MAIN")	{
 

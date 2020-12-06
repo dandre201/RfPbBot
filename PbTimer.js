@@ -15,15 +15,14 @@ client.on('ready', () => {
 
  client.on("message", function(message) {
  	var input = message.content.toUpperCase();
-  //var userNameDate = new Discord.User(client, data);
-  // var userName = userNameDate.username;
-  //
-  // message.reply(userName);
-  //
-  //   if(userName !=null){
-  //     message.reply("hello ");
-  //
-  //    }
+
+  var userName = message.member.user.tag
+  message.reply(userName);
+  
+    if(userName !=null){
+      message.reply("hello ");
+
+     }
 
  	  if(input === "?MAIN")	{
 

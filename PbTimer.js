@@ -18,10 +18,6 @@ client.on('ready', () => {
 
 //  var userName = message.member.user.tag
 
-if(input === "?DRACO")	{
-  getDraco();
-}
-
  	  if(input === "?MAIN")	{
 
   //draco pop on 15/11/2020  -
@@ -134,7 +130,7 @@ if(input === "?DRACO")	{
 
     }
 
-  else if (input === "?MEH"){
+    else if (input === "?MEH"){
     //herodian 24h  86400000
     var lastHero = 1605403080000;
     var heroRepop = 	86400000; // 24 hours in ms
@@ -143,6 +139,8 @@ if(input === "?DRACO")	{
     message.reply(heroPopMsg);
     message.reply("Herodian Pb pop time changes after maintenance, this time is the earlies and it can be anytime +2 hours");
     }
+
+    else if(input === "?DRACO")	{getDraco();}
 
     else if (input === "?HELP"){
 

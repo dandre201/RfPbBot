@@ -18,16 +18,14 @@ client.on('ready', () => {
 
 //  var userName = message.member.user.tag
 
-
+if(input === "?DRACO")	{
+  getDraco();
+}
 
  	  if(input === "?MAIN")	{
 
   //draco pop on 15/11/2020  -
-  var lastDraco= 1605438480000;
-  var dracoRePop= 115200000;  // 32 hours in ms
-  var dracoName= "Draco";
-  var dracoPopMsg = getNextPop( dracoName,lastDraco,dracoRePop);
-  message.reply(dracoPopMsg);
+  getDraco();
 
 
   //last 3d =   14/11/2020
@@ -51,6 +49,14 @@ client.on('ready', () => {
   var oclName= "RingLeader";
   var oclPopMsg = getNextPop( oclName,lastOcl,oclRepop);
   message.reply(oclPopMsg);
+
+  //Nova
+  var lastNova = 1608050700000;
+  var novaRepop = 14400000; //4 hours  to ms
+  var novaName= "Nova";
+  var novaPopMsg = getNextPop( novaName,lastNova,novaRepop);
+  message.reply(novaPopMsg);
+
 
     }
 
@@ -82,14 +88,14 @@ client.on('ready', () => {
     else if (input === "?HQ"){
     // need to check time , repop should be 4 hours
 
-    message.reply("These are wrong stop typnig this , and get me the pop + repop times!!!!! :D");
+    message.reply("These might be wrong ,  get me the pop + repop times!!!!! :D");
 
     //Solus, Ana, hq-warbeast
-    var lastHq = 1605531660000;
+    var lastHq = 1608051600000;
     var hqRepop = 14400000; //4 hours  to ms
     var hqName= "Solus, Ana, warbeast";
     var hqPopMsg = getNextPop( hqName,lastHq,hqRepop);
-    //message.reply(hqPopMsg);
+    message.reply(hqPopMsg);
 
     //hq ratmoth, argol drone
     var lastHqRat = 1605509100000;
@@ -145,6 +151,14 @@ client.on('ready', () => {
     }
  });
 
+
+function getDraco(){
+  var lastDraco= 1605438480000;
+  var dracoRePop= 115200000;  // 32 hours in ms
+  var dracoName= "Draco";
+  var dracoPopMsg = getNextPop( dracoName,lastDraco,dracoRePop);
+  message.reply(dracoPopMsg);
+}
 
 function getNextPop(pbName,lastPB, pbRePop){
 var d = new Date();

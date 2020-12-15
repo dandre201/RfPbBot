@@ -16,10 +16,6 @@ client.on('ready', () => {
  client.on("message", function(message) {
  	var input = message.content.toUpperCase();
 
-//  var userName = message.member.user.tag
-
-
-
  	  if(input === "?MAIN")	{
 
   //draco pop on 15/11/2020  -
@@ -152,8 +148,6 @@ client.on('ready', () => {
       message.reply(result);
     }
  });
-
-
 
 
 function getNextPop(pbName,lastPB, pbRePop){

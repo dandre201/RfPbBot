@@ -141,7 +141,7 @@ if(input === "?DRACO")	{
     var heroName= "herodian";
     var heroPopMsg = getNextPop( heroName,lastHero,heroRepop);
     message.reply(heroPopMsg);
-    message.reply("Herodian Pb pop time changes after maintenance, this tiem is the earlies and it can be anytime +2 hours");
+    message.reply("Herodian Pb pop time changes after maintenance, this time is the earlies and it can be anytime +2 hours");
     }
 
     else if (input === "?HELP"){

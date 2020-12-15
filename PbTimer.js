@@ -18,10 +18,16 @@ client.on('ready', () => {
 
 //  var userName = message.member.user.tag
 
+
+
  	  if(input === "?MAIN")	{
 
   //draco pop on 15/11/2020  -
-  getDraco();
+  var lastDraco= 1605438480000;
+  var dracoRePop= 115200000;  // 32 hours in ms
+  var dracoName= "Draco";
+  var dracoPopMsg = getNextPop( dracoName,lastDraco,dracoRePop);
+  message.reply(dracoPopMsg);
 
 
   //last 3d =   14/11/2020
@@ -130,17 +136,15 @@ client.on('ready', () => {
 
     }
 
-    else if (input === "?MEH"){
+  else if (input === "?MEH"){
     //herodian 24h  86400000
     var lastHero = 1605403080000;
     var heroRepop = 	86400000; // 24 hours in ms
     var heroName= "herodian";
     var heroPopMsg = getNextPop( heroName,lastHero,heroRepop);
     message.reply(heroPopMsg);
-    message.reply("Herodian Pb pop time changes after maintenance, this time is the earlies and it can be anytime +2 hours");
+    message.reply("Herodian Pb pop time changes after maintenance, this tiem is the earlies and it can be anytime +2 hours");
     }
-
-    else if(input === "?DRACO")	{getDraco();}
 
     else if (input === "?HELP"){
 
@@ -150,13 +154,7 @@ client.on('ready', () => {
  });
 
 
-function getDraco(){
-  var lastDraco= 1605438480000;
-  var dracoRePop= 115200000;  // 32 hours in ms
-  var dracoName= "Draco";
-  var dracoPopMsg = getNextPop( dracoName,lastDraco,dracoRePop);
-  message.reply(dracoPopMsg);
-}
+
 
 function getNextPop(pbName,lastPB, pbRePop){
 var d = new Date();

@@ -181,7 +181,7 @@ function  getDraco() {
   var dracoRePop= 115200000;  // 32 hours in ms
   var dracoName= "Draco";
   var dracoPopMsg = getNextPop( dracoName,lastDraco,dracoRePop);
-  message.reply(dracoPopMsg);
+  return message.reply(dracoPopMsg);
  }
 
  function  msToTime(duration) {

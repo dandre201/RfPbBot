@@ -56,6 +56,7 @@ client.on('ready', () => {
 
     else if (input ==="?DRACO"){
       getDraco();
+
     }
 
     else if (input === "?ELAN"){
@@ -184,6 +185,7 @@ function  getDraco() {
   var dracoName= "Draco";
   var dracoPopMsg = getNextPop( dracoName,lastDraco,dracoRePop);
   message.reply(dracoPopMsg);
+  return;
  }
 
  function  msToTime(duration) {

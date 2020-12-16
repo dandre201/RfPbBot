@@ -54,7 +54,9 @@ client.on('ready', () => {
 
     }
 
-    else if (input ==="?DRACO")
+    else if (input ==="?DRACO"){
+      getDraco();
+    }
 
     else if (input === "?ELAN"){
 
@@ -181,7 +183,7 @@ function  getDraco() {
   var dracoRePop= 115200000;  // 32 hours in ms
   var dracoName= "Draco";
   var dracoPopMsg = getNextPop( dracoName,lastDraco,dracoRePop);
-  return message.reply(dracoPopMsg);
+  message.reply(dracoPopMsg);
  }
 
  function  msToTime(duration) {

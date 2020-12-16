@@ -125,7 +125,7 @@ client.on('ready', () => {
     else if (input === "?HELP"){
 
       message.reply("Use the follow command to see PB's:  ?Main,  ?Elan, ?HQ, ?Other"  );;
-      message.reply("You can also type the PB name: ?Draco, ?Ringleader , ?Nova , etc"  );;
+      message.reply("Or you can also type the PB name: ?Draco, ?Ringleader , ?Nova , etc"  );;
     }
  });
 

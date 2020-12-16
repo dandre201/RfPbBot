@@ -19,8 +19,12 @@ client.on('ready', () => {
 
  	 if(input === "?MAIN")	{
 
-     getDraco();
-
+     //draco pop on 15/11/2020  -
+     var lastDraco= 1605438480000;
+     var dracoRePop= 115200000;  // 32 hours in ms
+     var dracoName= "Draco";
+     var dracoPopMsg = getNextPop( dracoName,lastDraco,dracoRePop);
+     message.reply(dracoPopMsg);
 
   //last 3d =   14/11/2020
   var last3D = 1605343200000;
@@ -55,7 +59,12 @@ client.on('ready', () => {
     }
 
     else if (input ==="?DRACO"){
-      getDraco();
+      //draco pop on 15/11/2020  -
+      var lastDraco= 1605438480000;
+      var dracoRePop= 115200000;  // 32 hours in ms
+      var dracoName= "Draco";
+      var dracoPopMsg = getNextPop( dracoName,lastDraco,dracoRePop);
+      message.reply(dracoPopMsg);
 
     }
 
@@ -178,15 +187,7 @@ var d = new Date();
     }
 }
 
-function  getDraco() {
-  //draco pop on 15/11/2020  -
-  var lastDraco= 1605438480000;
-  var dracoRePop= 115200000;  // 32 hours in ms
-  var dracoName= "Draco";
-  var dracoPopMsg = getNextPop( dracoName,lastDraco,dracoRePop);
-  message.reply(dracoPopMsg);
-  return;
- }
+
 
  function  msToTime(duration) {
     var milliseconds = parseInt((duration % 1000) / 100),

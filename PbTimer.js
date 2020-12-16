@@ -14,16 +14,12 @@ client.on('ready', () => {
  //server time might be different
 
  client.on("message", function(message) {
+
  	var input = message.content.toUpperCase();
 
- 	  if(input === "?MAIN")	{
+ 	 if(input === "?MAIN")	{
 
-  //draco pop on 15/11/2020  -
-  var lastDraco= 1605438480000;
-  var dracoRePop= 115200000;  // 32 hours in ms
-  var dracoName= "Draco";
-  var dracoPopMsg = getNextPop( dracoName,lastDraco,dracoRePop);
-  message.reply(dracoPopMsg);
+     getDraco();
 
 
   //last 3d =   14/11/2020
@@ -57,6 +53,8 @@ client.on('ready', () => {
 
 
     }
+
+    else if (input ==="?DRACO")
 
     else if (input === "?ELAN"){
 
@@ -176,6 +174,15 @@ var d = new Date();
       return result;
     }
 }
+
+function  getDraco() {
+  //draco pop on 15/11/2020  -
+  var lastDraco= 1605438480000;
+  var dracoRePop= 115200000;  // 32 hours in ms
+  var dracoName= "Draco";
+  var dracoPopMsg = getNextPop( dracoName,lastDraco,dracoRePop);
+  message.reply(dracoPopMsg);
+ }
 
  function  msToTime(duration) {
     var milliseconds = parseInt((duration % 1000) / 100),

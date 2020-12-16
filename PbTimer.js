@@ -152,6 +152,10 @@ client.on('ready', () => {
     message.reply("Herodian Pb pop time changes after maintenance, this tiem is the earlies and it can be anytime +2 hours");
     }
 
+    else if (input === "?TEST"){
+      message.reply(getPbTime());
+      }
+
     else if (input === "?HELP"){
 
       var result = ("Use the follow command to see PB's:  ?Main,  ?Elan, ?HQ, ?Other ?Meh"  );
@@ -187,7 +191,14 @@ var d = new Date();
     }
 }
 
+function getPbTime(){
+  var lastHero = 1605403080000;
+  var heroRepop = 	86400000; // 24 hours in ms
+  var heroName= "herodian";
+  var heroPopMsg = getNextPop( heroName,lastHero,heroRepop);
+  return heroPopMsg;
 
+}
 
  function  msToTime(duration) {
     var milliseconds = parseInt((duration % 1000) / 100),
